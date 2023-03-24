@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mongo 1</title>
+  </head>
+  <body>
+    <h2>Q1. Query the collection ""employee"" and list all the documents.     
+    </h2>
+    <h5>
+        Query => db.employee.find()
+    </h5>
+
+    <h2>
+      Q2. Query the collection ""employee"" and list the employees who are having salary more than 30000
+    </h2>
+    <h5>
+        Query => db.employee.find({salary:{$gt:"30000"}})
+    </h5>
+    <h2>
+      Q3. Query the collection ""employee"" and list the employees who are
+      having experience more than 2 years.
+    </h2>
+    <h5> Query => db.employee.find({overallExp:{$gt:"2"}})</h5>
+    <h2>
+      Q4. Query the collection ""employee"" and list the employees who are
+      graduated after 2015 and having experience more than 1 year
+    </h2>
+    <h5> Query => db.employee.find({overallExp:{$gt:"1"},yearGrad:{$gt:'2015'}}) </h5>
+    <h2>
+      Q5. Query the collection ""employee"" and update the salary of the
+      employee whose salary is greater than 70000 to 65000.
+    </h2>
+    <h5> Query =>  db.employee.updateMany({salary:"70000"},{$set:{salary:"65000"}})</h5>
+    <h2>
+      Q5. Delete all the documents from ""employee"" where last company is Y"
+    </h2>
+    <h5> Query => db.employee.deleteMany({lastCompany:'Y'})</h5>
+  </body>
+</html>
